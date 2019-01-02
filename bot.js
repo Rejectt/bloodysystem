@@ -496,5 +496,11 @@ client.on("message", message => {
     }
 });
 
+client.on("guildMemberAdd", (member) => {
+client.channels.get('529330322534301709').edit({name : `『 الاعضاء : ↩ ${member.guild.memberCount} 』`});
+})
+client.on("guildMemberRemove", (member) => {
+client.channels.get('529330322534301709').edit({name : `『 الأعضاء : ↩ ${member.guild.memberCount} 』`});
+})
 
 client.login(process.env.TOKEN);// لا تغير فيها شيء
