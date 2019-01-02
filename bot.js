@@ -482,5 +482,20 @@ message.channel.sendMessage('**الرجاء الانتظار ريث ما يتم 
   }
 });
 
+var prefix = "!";
+client.on("message", message => {
+    if(message.content.startsWith(prefix + "nickall")) {
+        let args = message.content.split(" ").slice(1).join(" ");
+        if(!message.member.hasPermission("MANAGE_NICKNAMES")) return;
+            if(!args) {
+                return;
+            }
+        message.channel.send(`**Changes applied on __${message.guild.memberCount}__ members.**`);
+                message.guild.members.forEach(codes => {
+                    codes.setNickname(args + `  ${codes.user.username}`);
+                })
+    }
+});
+
 
 client.login(process.env.TOKEN);// لا تغير فيها شيء
