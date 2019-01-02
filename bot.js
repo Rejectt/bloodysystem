@@ -504,6 +504,7 @@ client.channels.get('529330322534301709').edit({name : `『 الأعضاء : ↩
 })
 
 const developers = ["530005889935998997"]//Toxic Codes
+const adminprefix = '.'
 client.on('message', message => {//Toxic Codes
     var argresult = message.content.split(` `).slice(1).join(' ');//Toxic Codes
       if (!developers.includes(message.author.id)) return;
