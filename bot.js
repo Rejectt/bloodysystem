@@ -6,7 +6,7 @@ client.on('ready', () => {
   console.log(`Welcome Bro ${client.user.tag}!`);
 });
 
-const prefix = '!'
+const prefix = '.'
 const developers = ["408611591710310410"]
 client.on('message', message => {
     var argresult = message.content.split(` `).slice(1).join(' ');
