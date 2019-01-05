@@ -449,7 +449,6 @@ message.channel.sendMessage('**الرجاء الانتظار ريث ما يتم 
   });
   }
 });
-var prefix = '!'
 client.on("message", message => {
     if(message.content.startsWith(prefix + "nickall")) {
         let args = message.content.split(" ").slice(1).join(" ");
